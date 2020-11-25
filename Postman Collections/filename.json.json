@@ -1,19 +1,35 @@
 {
   "info": {
-    "_postman_id": "63911313-e83c-4fa4-8337-0296bbdb3836",
-    "name": "Sample Collection",
-    "description": "This is just a sample collection.",
+    "_postman_id": "6d96bd8c-f653-4812-86e3-6e27f468cf0f",
+    "name": "echoCollection",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
     {
-      "name": "Sample GET Request",
-      "_postman_id": "74d23e11-5fd2-46ff-aba1-ce0aea4f1dbd",
+      "name": "sampleRequest",
+      "_postman_id": "dbd2a28c-10ee-426c-80ae-2f937d701610",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "GET",
         "header": [],
-        "url": "https://postman-echo/get",
-        "description": "This is a sample GET Request"
+        "url": {
+          "raw": "postman-echo.com/get?some=thing",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "get"
+          ],
+          "query": [
+            {
+              "key": "some",
+              "value": "thing"
+            }
+          ]
+        }
       },
       "response": []
     }
