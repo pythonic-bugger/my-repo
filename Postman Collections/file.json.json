@@ -1,13 +1,13 @@
 {
   "info": {
-    "_postman_id": "6d96bd8c-f653-4812-86e3-6e27f468cf0f",
+    "_postman_id": "1d1693d3-8401-4d78-82d3-d99ecf64f3e0",
     "name": "echoCollection",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
     {
-      "name": "sampleRequest",
-      "_postman_id": "dbd2a28c-10ee-426c-80ae-2f937d701610",
+      "name": "echoRequest",
+      "_postman_id": "d9da86dd-49d6-477f-81f8-3a243e732eeb",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
