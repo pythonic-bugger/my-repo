@@ -1,8 +1,37 @@
 {
   "info": {
-    "_postman_id": "ed5822d6-8b6b-4332-9a77-90234d6c3cf1",
-    "name": "echoCollection",
+    "_postman_id": "2c3bc953-1005-40b0-812a-16c142d7b07c",
+    "name": "NonAdminUser02Collection",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
-  "item": []
+  "item": [
+    {
+      "name": "echoRequest",
+      "_postman_id": "da8214a9-98ab-4502-a57f-bbf401befb32",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://postman-echo/get?some=thing",
+          "protocol": "https",
+          "host": [
+            "postman-echo"
+          ],
+          "path": [
+            "get"
+          ],
+          "query": [
+            {
+              "key": "some",
+              "value": "thing"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
 }
