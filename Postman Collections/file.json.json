@@ -1,216 +1,37 @@
 {
   "info": {
-    "_postman_id": "dc8cdb71-8322-4a05-9aee-cbe93a072210",
-    "name": "Batch",
+    "_postman_id": "513a7982-6964-41d6-9372-3331261c39ca",
+    "name": "echoCollection",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
     {
-      "name": "Tigger Batch",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "id": "51c2b26f-a16b-4897-b441-2a7de499faa2",
-            "exec": [
-              "var jsonData = pm.response.json();",
-              "pm.collectionVariables.set(\"jobId\", jsonData.jobId);",
-              ""
-            ],
-            "type": "text/javascript"
-          }
-        }
-      ],
-      "_postman_id": "aa028d70-5e46-4c66-9a51-30f2b59e47b1",
+      "name": "echoRequest",
+      "_postman_id": "7ee6cd8a-1725-4282-ba7e-c875b4d2b88b",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
       "request": {
-        "auth": {
-          "type": "awsv4",
-          "awsv4": {
-            "secretKey": "{{AWS_SECRET_KEY}}",
-            "addAuthDataToQuery": false,
-            "service": "batch",
-            "region": "us-east-1",
-            "accessKey": "AKIAWINI3KAN66UQRAJW"
-          }
-        },
-        "method": "POST",
+        "method": "GET",
         "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n   \"containerOverrides\": { \n      \"environment\": [ \n         { \n            \"name\": \"SET_UP_COLLECTION_ID\",\n            \"value\": \"{{SET_UP_COLLECTION_ID}}\"\n         },\n         {\n            \"name\": \"LOAD_COLLECTION_ID\",\n            \"value\": \"{{LOAD_COLLECTION_ID}}\"\n         },\n         {\n            \"name\": \"TEAR_DOWN_COLLECTION_ID\",\n            \"value\": \"{{TEAR_DOWN_COLLECTION_ID}}\"\n         },\n         {\n            \"name\": \"ENVIRONMENT_ID\",\n            \"value\": \"{{ENVIRONMENT_ID}}\"\n         },\n        {\n            \"name\": \"VU\",\n            \"value\": \"{{VU}}\"\n         },\n        {\n            \"name\": \"DURATION\",\n            \"value\": \"{{DURATION}}\"\n         },\n         {\n             \"name\":\"YOUR_JOB_NAME\",\n             \"value\":\"{{YOUR_JOB_NAME}}\"\n         },\n\n         {\n            \"name\": \"X_API_KEY\",\n            \"value\": \"{{X_API_KEY}}\"\n         },\n         {\n             \"name\":\"K6_STATSD_NAMESPACE\",\n             \"value\":\"k6.{{YOUR_JOB_NAME}}.\"\n         }\n\n      ]\n   },\n   \"jobDefinition\": \"{{jobDefinition}}\",\n   \"jobName\": \"{{YOUR_JOB_NAME}}\",\n   \"jobQueue\": \"{{jobQueue}}\"\n\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+        "url": {
+          "raw": "postman-echo.com/get?some=thing",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "get"
+          ],
+          "query": [
+            {
+              "key": "some",
+              "value": "thing"
             }
-          }
-        },
-        "url": "https://batch.us-east-1.amazonaws.com/v1/submitjob"
-      },
-      "response": []
-    },
-    {
-      "name": "Fetch Job Status",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "id": "8c08197e-8925-48b2-b7d7-72a50fb5cc40",
-            "exec": [
-              "var jsonData = pm.response.json();",
-              "if(jsonData.jobs.length > 0){",
-              "    if(jsonData.jobs[0].status == \"RUNNING\"){",
-              "        console.log(\"Your Job Has Started\")",
-              "        postman.setNextRequest()",
-              "    }",
-              "    else if(jsonData.jobs[0].status == \"FAILED\") {",
-              "        console.log(\"Your Job Failed\", \"Check the console in AWS.\")",
-              "        postman.setNextRequest()",
-              "    }",
-              "    else if(jsonData.jobs[0].status == \"SUCCEEDED\") {",
-              "        console.log(\"Your Job went dirrectly to SUCCEEDED, this might be wrong I would checkout the output\")",
-              "        postman.setNextRequest()",
-              "    }",
-              "    else{",
-              "        postman.setNextRequest(\"Fetch Job Status\")",
-              "",
-              "    }",
-              "}",
-              "",
-              "setTimeout(function(){}, 5000);",
-              ""
-            ],
-            "type": "text/javascript"
-          }
+          ]
         }
-      ],
-      "_postman_id": "4cd253c7-d81c-4944-95b1-4df312d12d28",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "auth": {
-          "type": "awsv4",
-          "awsv4": {
-            "secretKey": "{{AWS_SECRET_KEY}}",
-            "addAuthDataToQuery": false,
-            "service": "batch",
-            "region": "us-east-1",
-            "accessKey": "AKIAWINI3KAN66UQRAJW"
-          }
-        },
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"jobs\":[\"{{jobId}}\"]\n\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": "https://batch.us-east-1.amazonaws.com/v1/describejobs"
       },
       "response": []
-    }
-  ],
-  "event": [
-    {
-      "listen": "prerequest",
-      "script": {
-        "id": "51df71bf-e58f-4a61-95cd-ade21fba25f2",
-        "type": "text/javascript",
-        "exec": [
-          ""
-        ]
-      }
-    },
-    {
-      "listen": "test",
-      "script": {
-        "id": "e8c8619a-f4c1-4bd4-8d3d-878be0325ce8",
-        "type": "text/javascript",
-        "exec": [
-          ""
-        ]
-      }
-    }
-  ],
-  "variable": [
-    {
-      "id": "6bc59b5a-b199-4ef4-8c9e-5fed33d7f00f",
-      "key": "AWS_SECRET_KEY",
-      "value": "Fill",
-      "type": "string"
-    },
-    {
-      "id": "69d73429-af26-43fe-815b-9a8a330dad6e",
-      "key": "X_API_KEY",
-      "value": "fill",
-      "type": "string"
-    },
-    {
-      "id": "dba7df28-d82e-466e-9197-afbed2c6ca85",
-      "key": "YOUR_JOB_NAME",
-      "value": "YourNAme",
-      "type": "string"
-    },
-    {
-      "id": "3790dfd8-2db0-4ad8-8cf8-e0859f94aea8",
-      "key": "SET_UP_COLLECTION_ID",
-      "value": "none",
-      "type": "string"
-    },
-    {
-      "id": "714089e5-9dd9-4bb2-8402-8451fdb0174a",
-      "key": "LOAD_COLLECTION_ID",
-      "value": "file",
-      "type": "string"
-    },
-    {
-      "id": "b087c9b7-6152-4735-8705-f53e35758e2f",
-      "key": "TEAR_DOWN_COLLECTION_ID",
-      "value": "none",
-      "type": "string"
-    },
-    {
-      "id": "9fdbd8d9-ab2c-4413-8c85-144e3400e14e",
-      "key": "ENVIRONMENT_ID",
-      "value": "fill",
-      "type": "string"
-    },
-    {
-      "id": "0113c0d1-609a-408d-a0d6-ac69815ffe2b",
-      "key": "VU",
-      "value": "1",
-      "type": "string"
-    },
-    {
-      "id": "3b9295fa-2068-4ef0-81ed-a292ffc0f385",
-      "key": "DURATION",
-      "value": "900",
-      "type": "string"
-    },
-    {
-      "id": "8895f5a1-dd18-4ef8-ba22-f34c8514981a",
-      "key": "jobQueue",
-      "value": "Load-tester-queue",
-      "type": "string"
-    },
-    {
-      "id": "f76ba4a8-981c-49f4-80c4-fbec2320ef43",
-      "key": "jobId",
-      "value": "4a84af37-1648-4d1d-a36c-dfbcf39da3ae",
-      "type": "string"
-    },
-    {
-      "id": "1f508c84-20ec-4024-8182-a328d9aa466c",
-      "key": "jobDefinition",
-      "value": "collection-k6-loadtester:10",
-      "type": "string"
     }
   ]
 }
