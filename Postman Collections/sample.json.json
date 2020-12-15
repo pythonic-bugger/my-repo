@@ -1,21 +1,8 @@
 {
   "info": {
-    "_postman_id": "225de5f7-12ad-4cd7-8b01-900d83e25e36",
-    "name": "Sample Collection1",
-    "description": "This is just a sample collection.",
+    "_postman_id": "9226c638-55e4-453b-9fe7-22bc709e3722",
+    "name": "echoCollection",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
-  "item": [
-    {
-      "name": "Sample GET Request",
-      "_postman_id": "a942ec4f-49c1-4a0a-bbb1-95c6d10dfb11",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": "https://postman-echo/get",
-        "description": "This is a sample GET Request"
-      },
-      "response": []
-    }
-  ]
+  "item": []
 }
