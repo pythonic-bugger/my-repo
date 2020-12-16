@@ -1,22 +1,8 @@
 {
   "info": {
-    "_postman_id": "9b3e18a5-e7ab-4c82-9d68-4add4ee83c32",
-    "name": "Echo Collection",
+    "_postman_id": "9226c638-55e4-453b-9fe7-22bc709e3722",
+    "name": "echoCollection",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
-  "item": [
-    {
-      "name": "Echo",
-      "_postman_id": "b7b7bcee-bb91-490c-bb3a-9297e36307a4",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": "https://postman-echo.com/get"
-      },
-      "response": []
-    }
-  ]
+  "item": []
 }
