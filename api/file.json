@@ -1,0 +1,212 @@
+{
+  "Name": "echoCollection..",
+  "BaseUri": "https://postman-echo.com",
+  "ServerConfiguration": {
+    "UseParent": false,
+    "DefaultEnvironment": "production",
+    "DefaultServer": "Server 1",
+    "Environments": [
+      {
+        "Name": "production",
+        "Servers": [
+          {
+            "Name": "Server 1",
+            "Url": "https://postman-echo.com"
+          }
+        ]
+      }
+    ],
+    "Parameters": []
+  },
+  "Version": "1.0",
+  "Contact": {},
+  "AdditionalHeaders": [],
+  "Authentication": {
+    "Type": "None",
+    "AuthType": "None",
+    "Parameters": [],
+    "Scopes": [],
+    "ParamFormats": {}
+  },
+  "Endpoints": [
+    {
+      "Name": "echorequest",
+      "HTTPMethod": "GET",
+      "Group": "Misc",
+      "RequiresAuthentication": true,
+      "Route": "/get",
+      "Responses": {},
+      "Response": {
+        "Optional": false,
+        "Type": "Void",
+        "IsSdlNativeType": true,
+        "Constant": false,
+        "IsStream": false,
+        "IsAttribute": false,
+        "Nullable": false,
+        "IsArray": false,
+        "IsMap": false,
+        "IsArrayOfMap": false,
+        "Deprecated": false,
+        "Name": "Response"
+      },
+      "HasOptionalQueryParams": false,
+      "HasOptionalFieldParams": false,
+      "CollectParameters": false,
+      "Parameters": [
+        {
+          "ParamFormat": "Query",
+          "Optional": false,
+          "Type": "String",
+          "IsSdlNativeType": true,
+          "Constant": false,
+          "IsStream": false,
+          "IsAttribute": false,
+          "Example": "thing",
+          "Nullable": false,
+          "IsArray": false,
+          "IsMap": false,
+          "IsArrayOfMap": false,
+          "Deprecated": false,
+          "Name": "some",
+          "Description": "",
+          "DefaultValue": ""
+        }
+      ],
+      "Errors": [],
+      "TestCases": [
+        {
+          "Name": "echorequest",
+          "Enabled": true,
+          "ShouldPass": true,
+          "InputParameters": [
+            {
+              "IsNull": false,
+              "Name": "some",
+              "Value": "thing"
+            }
+          ],
+          "ExpectedStatus": "200",
+          "ExpectedHeaders": [],
+          "ExpectedHeadersAllowExtra": true,
+          "ExpectedBodyMatchMode": "NONE",
+          "ExpectedArrayOrderedMatching": false,
+          "ExpectedArrayCheckCount": false,
+          "ResponseMatchSchema": true
+        }
+      ],
+      "WrapBodyInObject": false,
+      "Deprecated": false,
+      "XmlRequest": false,
+      "XmlResponse": false
+    }
+  ],
+  "EndpointGroups": [
+    {
+      "Name": "Misc",
+      "Description": ""
+    }
+  ],
+  "CustomTypes": [],
+  "UserDefinedImportedTypes": [],
+  "CodeGenSettings": {
+    "SynchronyMode": "Asynchronous",
+    "ModelSerializationScheme": "Json",
+    "ArraySerialization": "Indexed",
+    "Nullify404": false,
+    "UseHttpMethodPrefix": true,
+    "UseModelPrefix": false,
+    "UseExceptionPrefix": true,
+    "UseEnumPrefix": true,
+    "UseControllerPrefix": true,
+    "UseConstructorsForConfig": false,
+    "Timeout": 0.0,
+    "AndroidUseAppManifest": false,
+    "iOSUseAppInfoPlist": false,
+    "iOSGenerateCoreData": false,
+    "CollapseParamsToArray": false,
+    "RunscopeEnabled": false,
+    "AndroidHttpClient": "ANDROID_OK",
+    "JavaHttpClient": "JAVA_OK",
+    "ObjCHttpClient": "UNIREST",
+    "CSharpHttpClient": "UNIREST",
+    "NodeHttpClient": "NODE_REQUEST",
+    "JavaUsePropertiesConfig": false,
+    "PHPHttpClient": "UNIREST",
+    "EnablePHPComposerVersionString": false,
+    "EnableGlobalUserAgent": true,
+    "EnableAdditionalModelProperties": false,
+    "PreserveParameterOrder": true,
+    "ValidateRequiredParameters": false,
+    "AppendContentHeaders": true,
+    "GenerateInterfaces": false,
+    "UseCommonSDKLibrary": false,
+    "ParameterArrayFormat": "ParamArrayWithIndex",
+    "SecurityProtocols": [
+      "Ssl3",
+      "Tls"
+    ],
+    "GenerateTravisConfig": false,
+    "GenerateCircleConfig": false,
+    "GenerateAppveyorConfig": false,
+    "GenerateJenkinsConfig": false,
+    "EnableLogging": false,
+    "EnableHttpCache": false,
+    "Retries": 0,
+    "RetryInterval": 1.0,
+    "BackoffFactor": 0.0,
+    "UserConfigurableRetries": true,
+    "GenerateAdvancedDocs": true,
+    "DisableDocs": false,
+    "StoreTimezoneInformation": false,
+    "UnderscoreNumbers": true,
+    "UseSingletonPattern": true,
+    "IgnoreIfNullJson": false,
+    "DisableLinting": false,
+    "SortResources": false,
+    "LiftParameterDescriptionFromCustomType": false,
+    "AllowSkippingSSLCertVerification": false,
+    "ApplyCustomizations": [],
+    "DoNotSplitWords": [],
+    "ReturnCompleteHttpResponse": false,
+    "ThrowForHttpErrorStatusCodes": true,
+    "GenerateModels": true,
+    "GenerateEnums": true,
+    "GenerateExceptions": true,
+    "ResponseMapping": {
+      "Type": "Simple"
+    },
+    "ForceKeywordArgsInRuby": false,
+    "SymbolizeHashKeysInRuby": false,
+    "UsageExampleEndpoint": {
+      "Description": "",
+      "EndpointGroupName": "",
+      "EndpointName": ""
+    },
+    "IsLatestVersion": false,
+    "CustomDependencies": [],
+    "EnableImmutableModels": false,
+    "UseEndpointMethodName": false,
+    "EncodeTemplateParameters": true,
+    "GenerateExamplesForOptionalFields": false,
+    "MultitargetDotnetVersions": false
+  },
+  "Errors": [],
+  "TestGenSettings": {
+    "Configuration": {},
+    "TestTimeout": 30,
+    "PrecisionDelta": 0.01
+  },
+  "Roles": [],
+  "Namespaces": [],
+  "ExportSettings": {
+    "ExportExtensions": false,
+    "UseDateTimeOnlyInRaml": false,
+    "SetPostmanParamValuesAsVariables": false,
+    "WrapResponseFieldInWsdl": true,
+    "AllowEmptyTypeAttributesInXsd": false,
+    "WrapInputOutputTypesInElementInXsd": false,
+    "AddRefSiblingDataInAllOfSchema": false,
+    "EncodeUrlParamsInPostman": true
+  }
+}
