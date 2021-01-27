@@ -6,6 +6,25 @@
   },
   "item": [
     {
+      "name": "subFolder",
+      "item": [
+        {
+          "name": "New Request",
+          "_postman_id": "e71c64c5-1847-4051-8a01-5f8967117a5d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "641c6f8f-1dd5-4bdd-90bb-d4cfbe5b05b6"
+    },
+    {
       "name": "get",
       "_postman_id": "360d3c1d-343c-4074-9808-8c4b29ecb370",
       "protocolProfileBehavior": {
