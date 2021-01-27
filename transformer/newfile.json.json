@@ -9,7 +9,7 @@
       "name": "subFolder",
       "item": [
         {
-          "name": "New Request",
+          "name": "put",
           "_postman_id": "e71c64c5-1847-4051-8a01-5f8967117a5d",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
