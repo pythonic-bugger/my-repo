@@ -17,7 +17,20 @@
           "request": {
             "method": "GET",
             "header": [],
-            "url": null
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "formkey",
+                  "value": "formValue",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": "postman.com/put"
           },
           "response": []
         }
