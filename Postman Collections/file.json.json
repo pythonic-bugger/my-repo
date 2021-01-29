@@ -1,13 +1,13 @@
 {
   "info": {
-    "_postman_id": "6f57c267-45f4-484e-b16a-02d037153914",
-    "name": "betaCollection",
+    "_postman_id": "c487f2ad-da8b-4080-b9b8-96cd02544358",
+    "name": "Test",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
     {
-      "name": "echo",
-      "_postman_id": "6bd2002e-1c50-4031-973f-1e0a3a2a31ed",
+      "name": "sampleRequest2",
+      "_postman_id": "9fd8107d-582a-46d3-a970-930a06d047d3",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -15,7 +15,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "postman-echo.com/get?some=thing",
+          "raw": "postman-echo.com/get?some=thinghi",
           "host": [
             "postman-echo",
             "com"
@@ -26,10 +26,11 @@
           "query": [
             {
               "key": "some",
-              "value": "thing"
+              "value": "thinghi"
             }
           ]
-        }
+        },
+        "description": "efere"
       },
       "response": []
     }
