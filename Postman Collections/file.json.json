@@ -13,7 +13,8 @@
           "script": {
             "id": "b9bfb583-9063-421f-8489-0c6765277c1b",
             "exec": [
-              "console.log(`some message version 01 updated`);"
+              "console.log(`some message version 01 updated`);",
+              "console.log(`some message version 02 updated`);"
             ],
             "type": "text/javascript"
           }
