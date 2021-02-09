@@ -6,7 +6,19 @@
   },
   "item": [
     {
-      "name": "sampleRequest2",
+      "name": "sampleRequest2- updated",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "b9bfb583-9063-421f-8489-0c6765277c1b",
+            "exec": [
+              "console.log(`some message version 01 updated`);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "_postman_id": "9fd8107d-582a-46d3-a970-930a06d047d3",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -31,6 +43,19 @@
           ]
         },
         "description": "efere"
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "_postman_id": "85c73d03-8f7d-4276-95d1-a19bd741f7bc",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
       },
       "response": []
     }
