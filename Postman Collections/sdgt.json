@@ -1,0 +1,106 @@
+{
+  "info": {
+    "_postman_id": "e383c15b-bcfd-49c1-a5de-db627ecdf5d1",
+    "name": "test collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "subFolder",
+      "item": [
+        {
+          "name": "put",
+          "_postman_id": "e71c64c5-1847-4051-8a01-5f8967117a5d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "formkey",
+                  "value": "formValue",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": "postman.com/put"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "641c6f8f-1dd5-4bdd-90bb-d4cfbe5b05b6"
+    },
+    {
+      "name": "get",
+      "_postman_id": "360d3c1d-343c-4074-9808-8c4b29ecb370",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "postman-echo.com/get?some=thing",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "get"
+          ],
+          "query": [
+            {
+              "key": "some",
+              "value": "thing"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "postman-echo.com/post?some=thing",
+      "_postman_id": "4d064316-e8fd-4b74-8b09-9d06a6e8d9e8",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"key\": \"valueOfKey\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "postman-echo.com/post?some=thing",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "post"
+          ],
+          "query": [
+            {
+              "key": "some",
+              "value": "thing"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
