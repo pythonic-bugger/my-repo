@@ -65,6 +65,42 @@
               ]
             }
           },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\"status\":\"success\"}"
+        },
+        {
+          "id": "bfca68d1-0380-4161-a396-5e83a271847d",
+          "name": "echoRequest",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://postman-echo.com/get?var1=abc&var2=xyz",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "get"
+              ],
+              "query": [
+                {
+                  "key": "var1",
+                  "value": "abc"
+                },
+                {
+                  "key": "var2",
+                  "value": "xyz"
+                }
+              ]
+            }
+          },
           "_postman_previewlanguage": null,
           "header": null,
           "cookie": [],
