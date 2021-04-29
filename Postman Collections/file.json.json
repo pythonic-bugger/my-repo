@@ -7,7 +7,7 @@
   "item": [
     {
       "name": "echoRequest",
-      "_postman_id": "d88773a4-7d9e-487b-bed0-96635aba79d5",
+      "id": "d88773a4-7d9e-487b-bed0-96635aba79d5",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -36,7 +36,42 @@
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "id": "859fcb52-b364-4ba9-8c01-a224d42ce595",
+          "name": "echoRequest",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://postman-echo.com/get?var1=abc&var2=xyz",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "get"
+              ],
+              "query": [
+                {
+                  "key": "var1",
+                  "value": "abc"
+                },
+                {
+                  "key": "var2",
+                  "value": "xyz"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "responseTime": null,
+          "body": null
+        }
+      ]
     }
   ]
 }
