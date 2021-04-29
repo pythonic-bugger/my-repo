@@ -1,25 +1,13 @@
 {
   "info": {
-    "_postman_id": "6f57c267-45f4-484e-b16a-02d037153914",
-    "name": "betaCollection",
+    "_postman_id": "95c7a314-48ce-4e22-8946-cf74e52f3613",
+    "name": "echoCollection",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
     {
-      "name": "echo",
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "id": "4fce52e2-2f57-4d8a-a81b-5c36acd6557a",
-            "exec": [
-              "console.log(`something new in requeeeeeeeest`);"
-            ],
-            "type": "text/javascript"
-          }
-        }
-      ],
-      "_postman_id": "6bd2002e-1c50-4031-973f-1e0a3a2a31ed",
+      "name": "echoRequest",
+      "_postman_id": "d88773a4-7d9e-487b-bed0-96635aba79d5",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -27,7 +15,8 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "postman-echo.com/get?some=thing",
+          "raw": "https://postman-echo.com/get?var1=abc&var2=xyz",
+          "protocol": "https",
           "host": [
             "postman-echo",
             "com"
@@ -37,35 +26,17 @@
           ],
           "query": [
             {
-              "key": "some",
-              "value": "thing"
+              "key": "var1",
+              "value": "abc"
+            },
+            {
+              "key": "var2",
+              "value": "xyz"
             }
           ]
         }
       },
       "response": []
-    }
-  ],
-  "event": [
-    {
-      "listen": "prerequest",
-      "script": {
-        "id": "65539eff-a45f-4d42-b8c1-1e2f79181053",
-        "type": "text/javascript",
-        "exec": [
-          "console.log(`somethjing new`);"
-        ]
-      }
-    },
-    {
-      "listen": "test",
-      "script": {
-        "id": "0603a7e3-744d-4427-be0f-f7e0c88b2668",
-        "type": "text/javascript",
-        "exec": [
-          ""
-        ]
-      }
     }
   ]
 }
