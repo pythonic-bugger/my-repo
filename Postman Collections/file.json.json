@@ -1,13 +1,25 @@
 {
   "info": {
-    "_postman_id": "0280a829-30e4-48b9-b448-37cfb4e1f0c4",
-    "name": "echoCo9llection",
+    "_postman_id": "6f57c267-45f4-484e-b16a-02d037153914",
+    "name": "betaCollection",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
     {
       "name": "echo",
-      "_postman_id": "dc204b61-44c5-40a5-a362-e27491909493",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "4fce52e2-2f57-4d8a-a81b-5c36acd6557a",
+            "exec": [
+              "console.log(`something new in request`);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "6bd2002e-1c50-4031-973f-1e0a3a2a31ed",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -31,56 +43,24 @@
           ]
         }
       },
-      "response": [
-        {
-          "id": "03329449-da3c-4e97-87fe-afc03ae73648",
-          "name": "echo",
-          "originalRequest": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "postman-echo.com/get?some=thing",
-              "host": [
-                "postman-echo",
-                "com"
-              ],
-              "path": [
-                "get"
-              ],
-              "query": [
-                {
-                  "key": "some",
-                  "value": "thing"
-                }
-              ]
-            }
-          },
-          "_postman_previewlanguage": null,
-          "header": null,
-          "cookie": [],
-          "responseTime": null,
-          "body": null
-        }
-      ]
+      "response": []
     }
   ],
   "event": [
     {
       "listen": "prerequest",
       "script": {
-        "id": "58ab594c-a76a-4990-b3d4-14b6b7b39550",
+        "id": "65539eff-a45f-4d42-b8c1-1e2f79181053",
         "type": "text/javascript",
         "exec": [
-          "console.log(`something`);",
-          "console.log(`something`);",
-          "console.log(`something`);"
+          "console.log(`somethjing new`);"
         ]
       }
     },
     {
       "listen": "test",
       "script": {
-        "id": "e60053c6-ae0f-43b2-8756-79918cfc45f9",
+        "id": "0603a7e3-744d-4427-be0f-f7e0c88b2668",
         "type": "text/javascript",
         "exec": [
           ""
