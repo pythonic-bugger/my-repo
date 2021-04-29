@@ -13,7 +13,7 @@
           "script": {
             "id": "4fce52e2-2f57-4d8a-a81b-5c36acd6557a",
             "exec": [
-              "console.log(`something new in requeeeest`);"
+              "console.log(`something new in requeeeeest`);"
             ],
             "type": "text/javascript"
           }
