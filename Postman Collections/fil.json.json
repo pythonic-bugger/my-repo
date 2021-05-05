@@ -1,0 +1,22 @@
+{
+  "info": {
+    "_postman_id": "7b7944f6-be81-423f-ad36-e7b23502c07e",
+    "name": "1669 integration test updated",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Echo",
+      "_postman_id": "d812fe02-5f62-49e2-a043-74da57411280",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://postman-echo.com/get"
+      },
+      "response": []
+    }
+  ]
+}
