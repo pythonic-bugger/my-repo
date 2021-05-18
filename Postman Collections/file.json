@@ -1,13 +1,13 @@
 {
   "info": {
-    "_postman_id": "a80a8703-5751-42c5-802e-840358391d11",
-    "name": "echoCollection",
+    "_postman_id": "32f7add5-31e2-4dc2-84a4-009773a67229",
+    "name": "EchoCollection",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
     {
-      "name": "echoRequest",
-      "_postman_id": "b2ed2627-7611-4c08-85d9-c06e3739dbd8",
+      "name": "Echo Request",
+      "_postman_id": "da7bd872-1d01-4539-8c02-17d8e297e47b",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -15,7 +15,8 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "postman-echo.com/get?var=something",
+          "raw": "https://postman-echo.com/get?some=thing",
+          "protocol": "https",
           "host": [
             "postman-echo",
             "com"
@@ -25,8 +26,8 @@
           ],
           "query": [
             {
-              "key": "var",
-              "value": "something"
+              "key": "some",
+              "value": "thing"
             }
           ]
         }
