@@ -4234,7 +4234,7 @@
       "response": []
     },
     {
-      "name": "New Request",
+      "name": "echoRequest2",
       "_postman_id": "d0a14e72-422a-45a0-836c-1169d8a32752",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
