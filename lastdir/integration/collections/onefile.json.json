@@ -4326,7 +4326,22 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": null
+        "url": {
+          "raw": "postman-echo.com/get?some=thing100",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "get"
+          ],
+          "query": [
+            {
+              "key": "some",
+              "value": "thing100"
+            }
+          ]
+        }
       },
       "response": []
     }
