@@ -4290,7 +4290,7 @@
       "response": []
     },
     {
-      "name": "New Request",
+      "name": "echoRequest10",
       "_postman_id": "84ac560c-1d8e-47bc-9e7d-43a226d3e39f",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -4298,7 +4298,22 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": null
+        "url": {
+          "raw": "postman-echo.com/get?some=thing10",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "get"
+          ],
+          "query": [
+            {
+              "key": "some",
+              "value": "thing10"
+            }
+          ]
+        }
       },
       "response": []
     }
