@@ -4270,7 +4270,22 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": null
+        "url": {
+          "raw": "postman-echo.com/get?some=thing",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "get"
+          ],
+          "query": [
+            {
+              "key": "some",
+              "value": "thing"
+            }
+          ]
+        }
       },
       "response": []
     }
