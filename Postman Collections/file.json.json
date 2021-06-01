@@ -11,7 +11,7 @@
       "item": [
         {
           "name": "Sample POST Request",
-          "_postman_id": "c86f120d-8c0d-42fd-bf4b-5c02feb78797",
+          "id": "0ff4da67-fd7d-4250-80b2-f087244ecd17",
           "request": {
             "method": "POST",
             "header": [
@@ -22,10 +22,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"data\": \"123\"}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\"data\": \"123\"}"
             },
             "url": "https://postman-echo.com/post",
             "description": "This is a sample POST Request"
@@ -33,11 +30,11 @@
           "response": []
         }
       ],
-      "_postman_id": "ea6e85bc-ebcb-4e3f-85b2-0094c7f637b3"
+      "id": "d630547d-629a-4551-9808-6861480af26d"
     },
     {
       "name": "Sample GET Request",
-      "_postman_id": "25f8f478-29dc-4430-a901-57fef2ef82fd",
+      "id": "a2e7795c-7237-43d4-9d67-7855f120dd1f",
       "request": {
         "method": "GET",
         "header": [],
