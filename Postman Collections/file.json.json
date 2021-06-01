@@ -1,6 +1,6 @@
 {
   "info": {
-    "_postman_id": "723796a5-f5ca-4d39-a142-35ccb3d38bd4",
+    "_postman_id": "78ae26d4-24d1-4fca-81ab-5ff9ede46815",
     "name": "Sample Collection for integrations",
     "description": "This is just a sample collection.",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
@@ -11,7 +11,7 @@
       "item": [
         {
           "name": "Sample POST Request",
-          "id": "10b69505-e5ed-498c-85d4-8077cb7bf68c",
+          "_postman_id": "c86f120d-8c0d-42fd-bf4b-5c02feb78797",
           "request": {
             "method": "POST",
             "header": [
@@ -22,7 +22,10 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"data\": \"123\"}"
+              "raw": "{\"data\": \"123\"}",
+              "options": {
+                "raw": {}
+              }
             },
             "url": "https://postman-echo.com/post",
             "description": "This is a sample POST Request"
@@ -30,11 +33,11 @@
           "response": []
         }
       ],
-      "id": "ddf87650-8c9c-400e-beb7-abf25be59b55"
+      "_postman_id": "ea6e85bc-ebcb-4e3f-85b2-0094c7f637b3"
     },
     {
       "name": "Sample GET Request",
-      "id": "51ccd4a4-3095-4d75-af1c-a16902f68ece",
+      "_postman_id": "25f8f478-29dc-4430-a901-57fef2ef82fd",
       "request": {
         "method": "GET",
         "header": [],
