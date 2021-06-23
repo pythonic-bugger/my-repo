@@ -1,40 +1,14 @@
 {
   "info": {
-    "_postman_id": "78ae26d4-24d1-4fca-81ab-5ff9ede46815",
-    "name": "Sample Collection for integrations",
+    "_postman_id": "7ff544b3-787d-4aea-a5a8-94fe00f5e2d9",
+    "name": "Integration Collection",
     "description": "This is just a sample collection.",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
     {
-      "name": "This is a folder",
-      "item": [
-        {
-          "name": "Sample POST Request",
-          "id": "0ff4da67-fd7d-4250-80b2-f087244ecd17",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"data\": \"123\"}"
-            },
-            "url": "https://postman-echo.com/post",
-            "description": "This is a sample POST Request"
-          },
-          "response": []
-        }
-      ],
-      "id": "d630547d-629a-4551-9808-6861480af26d"
-    },
-    {
       "name": "Sample GET Request",
-      "id": "a2e7795c-7237-43d4-9d67-7855f120dd1f",
+      "_postman_id": "f6b0e726-440e-48ca-b5f8-fcb3c9b8594c",
       "request": {
         "method": "GET",
         "header": [],
