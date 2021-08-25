@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: '1.0'
-  title: stage api updated
+  title: stage api updated 2
 servers:
   - url: 'https://petstore.swagger.io/v1'
 paths:
