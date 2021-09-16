@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  version: '1.03'
+  version: '2.0'
   title: api force one updated new update from postman
 servers:
   - url: 'https://petstore.swagger.io/v1'
