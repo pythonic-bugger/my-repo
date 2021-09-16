@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: '1.03'
-  title: api force one
+  title: api force one updated
 servers:
   - url: 'https://petstore.swagger.io/v1'
 paths:
