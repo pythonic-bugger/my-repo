@@ -1,0 +1,598 @@
+{
+  "info": {
+    "_postman_id": "9ddde1ef-5bcb-46e0-8ac8-08ee8caf78e3",
+    "name": "collectionA - updated",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "https://github.com/",
+      "id": "6638af2f-5ee1-4815-a908-86099d9b740b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          },
+          {
+            "key": "Upgrade-Insecure-Requests",
+            "value": "1"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"
+          },
+          {
+            "key": "Accept",
+            "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+          }
+        ],
+        "url": "https://github.com/"
+      },
+      "response": []
+    },
+    {
+      "name": "https://github.com/",
+      "id": "6d83d304-b7e5-4da2-9381-8a257eba6f39",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          },
+          {
+            "key": "Upgrade-Insecure-Requests",
+            "value": "1"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"
+          },
+          {
+            "key": "Accept",
+            "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+          }
+        ],
+        "url": "https://github.com/"
+      },
+      "response": []
+    },
+    {
+      "name": "https://github.com/dashboard/top_repositories?location=left",
+      "id": "3925290c-6b17-4568-b9c0-3cde1cd03f6a",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\""
+          },
+          {
+            "key": "Accept",
+            "value": "text/html"
+          },
+          {
+            "key": "X-Requested-With",
+            "value": "XMLHttpRequest"
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          }
+        ],
+        "url": {
+          "raw": "https://github.com/dashboard/top_repositories?location=left",
+          "protocol": "https",
+          "host": [
+            "github",
+            "com"
+          ],
+          "path": [
+            "dashboard",
+            "top_repositories"
+          ],
+          "query": [
+            {
+              "key": "location",
+              "value": "left"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://github.com/dashboard/recent-activity",
+      "id": "4ff23932-6d2d-4f9a-855e-f00be3aa7cf7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\""
+          },
+          {
+            "key": "Accept",
+            "value": "text/html"
+          },
+          {
+            "key": "X-Requested-With",
+            "value": "XMLHttpRequest"
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          }
+        ],
+        "url": "https://github.com/dashboard/recent-activity"
+      },
+      "response": []
+    },
+    {
+      "name": "https://github.com/dashboard/top_repositories?location=center",
+      "id": "17b7955c-5639-4799-9c25-4ac1aff0e72d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\""
+          },
+          {
+            "key": "Accept",
+            "value": "text/html"
+          },
+          {
+            "key": "X-Requested-With",
+            "value": "XMLHttpRequest"
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          }
+        ],
+        "url": {
+          "raw": "https://github.com/dashboard/top_repositories?location=center",
+          "protocol": "https",
+          "host": [
+            "github",
+            "com"
+          ],
+          "path": [
+            "dashboard",
+            "top_repositories"
+          ],
+          "query": [
+            {
+              "key": "location",
+              "value": "center"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://github.com/dashboard/recent-activity",
+      "id": "70307382-47b2-4ba1-9a9f-63047b766cd6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\""
+          },
+          {
+            "key": "Accept",
+            "value": "text/html"
+          },
+          {
+            "key": "X-Requested-With",
+            "value": "XMLHttpRequest"
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          }
+        ],
+        "url": "https://github.com/dashboard/recent-activity"
+      },
+      "response": []
+    },
+    {
+      "name": "https://github.com/dashboard-feed",
+      "id": "0094d6ae-9210-43b6-8c39-68c5bc78bf98",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\""
+          },
+          {
+            "key": "Accept",
+            "value": "text/html"
+          },
+          {
+            "key": "X-Requested-With",
+            "value": "XMLHttpRequest"
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          }
+        ],
+        "url": "https://github.com/dashboard-feed"
+      },
+      "response": []
+    },
+    {
+      "name": "https://github.com/users/qualityTestPostman/feature_preview/indicator_check",
+      "id": "b6bbe9a9-d864-497e-9fac-c9c752991a23",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\""
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          }
+        ],
+        "url": "https://github.com/users/qualityTestPostman/feature_preview/indicator_check"
+      },
+      "response": []
+    },
+    {
+      "name": "https://github.com/users/86989751/menu",
+      "id": "42bc1532-123e-4d7d-85aa-18e8dba0d5f9",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\""
+          },
+          {
+            "key": "Accept",
+            "value": "text/html"
+          },
+          {
+            "key": "X-Requested-With",
+            "value": "XMLHttpRequest"
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          }
+        ],
+        "url": "https://github.com/users/86989751/menu"
+      },
+      "response": []
+    },
+    {
+      "name": "https://github.com/logout",
+      "id": "d194635f-1d0e-44ae-bbbc-618deeaf11a6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          },
+          {
+            "key": "Upgrade-Insecure-Requests",
+            "value": "1"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"
+          },
+          {
+            "key": "Accept",
+            "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "authenticity_token",
+              "value": "ES4VxNS7sV+ZPfQtWtaxc/ms+5S2twE0jxPG2qFd2PvFLboAGNEnGZwhIBm++ZzoyJtnGz84UJKKfQlnP/B39w=="
+            },
+            {
+              "key": "required_field_4125",
+              "value": ""
+            },
+            {
+              "key": "timestamp",
+              "value": "1633517724707"
+            },
+            {
+              "key": "timestamp_secret",
+              "value": "97086542ede73421e49009d4d019c51eb10b13512bdaf50851390a657bf89528"
+            }
+          ]
+        },
+        "url": "https://github.com/logout"
+      },
+      "response": []
+    },
+    {
+      "name": "https://github.com/",
+      "id": "a891e573-eb2c-42bd-8644-3447526ed5d6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Upgrade-Insecure-Requests",
+            "value": "1"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"
+          },
+          {
+            "key": "Accept",
+            "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          }
+        ],
+        "url": "https://github.com/"
+      },
+      "response": []
+    },
+    {
+      "name": "https://github.com/webgl-globe/data/data.json",
+      "id": "ce6c753b-571b-4a3d-9635-57c3899d58bb",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          },
+          {
+            "key": "Accept",
+            "value": "*/*"
+          }
+        ],
+        "url": "https://github.com/webgl-globe/data/data.json"
+      },
+      "response": []
+    },
+    {
+      "name": "https://healthline.com/",
+      "id": "30c58dff-a661-4b5b-9cab-464cc080e37f",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "accept",
+            "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+          },
+          {
+            "key": "accept-encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "accept-language",
+            "value": "en-GB,en-US;q=0.9,en;q=0.8"
+          },
+          {
+            "key": "cache-control",
+            "value": "max-age=0"
+          },
+          {
+            "key": "connection",
+            "value": "keep-alive"
+          },
+          {
+            "key": "cookie",
+            "value": "blab=6e5b7929-79b3-4c59-bc2f-8dbd63537afb; _pubcid=14f7dc55-8941-4967-b95c-bd353fd2a93d; _adb=a2kt44a1cw3dCLSwBGQ3; _ga=GA1.2.1863977859.1630659021; tglr_tenant_id=src_1Tqf7BF96WTbG5QbUndHWIgKoFo; tglr_anon_id=8b5651c4-d3f4-4261-9d0d-5d974406742c; pubcid_sharedid=01FDA1JGQKBZJSP8D62F0K9Q3W; _fbp=fb.1.1630659034720.932002995; _pin_unauth=dWlkPVlqa3dZak15WkRZdE1qZ3pNaTAwT1dZekxUazRabVV0WmpBNE9UQXlZVE5rTkdZMw; __gads=ID=3e3372e9cbf2193c-22992b5e56cb00d8:T=1630659023:RT=1630659125:S=ALNI_MbVUT4GEcVnw6pFspXh_RwWa-cuMA; chsn_cnsnt=tglr_ref%2Ctglr_req%2Ctglr_sess_id%2Ctglr_sess_count%2Ctglr_anon_id%2Ctglr_tenant_id%2Ctglr_virtual_ref%2Ctglr_transit_id%2Cchsn_dcsn_cache%2Cpmpdid%2Cpmpredirected%2Cpmpredir%2Cfuseid%2Ccohsn_xs_id%2Cchsn_auth_id%2ChashID%2CetagID%2CreinforcedID%2ChttpOnlyID%2CfpID%2CflID%2Ctglr_smpl%2Ctglr_reinforce%2Ctglr_gpc_sess_id; cohsn_xs_id=426b111e-d6b7-4a42-9cfd-d73eb20199ab; tglr_sess_count=3"
+          },
+          {
+            "key": "host",
+            "value": "healthline.com"
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "document"
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "navigate"
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "none"
+          },
+          {
+            "key": "sec-fetch-user",
+            "value": "?1"
+          },
+          {
+            "key": "upgrade-insecure-requests",
+            "value": "1"
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"
+          }
+        ],
+        "url": "https://healthline.com/"
+      },
+      "response": []
+    }
+  ]
+}
