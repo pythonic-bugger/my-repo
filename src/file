@@ -1,57 +1,201 @@
-openapi: 3.0.0
-info:
-  version: '1.0'
-  title: admin api
-servers:
+openapi: "3.0.0"                                    # Version of OpenAPI Specification of the document
+info:                                               # Core information object
+  version: "1.0.1"                                  # Version of the API Document (not service)
+  title: "Profile API"                              # Title of the API being documented
+  contact:                                          # Contact Information for this API
+    name: API Support
+    url: https://www.example.com/support
+    email: support@example.com
+servers:                                            # Servers that this API is deployed to
   - url: 'http://localhost:3000'
-paths:
-  /user:
+security:
+  - OAuth2:
+    - b8777e37-7cb2-4977-bafe-2dcb1c9723d4
+paths:                                              # Paths that are exposed by the API
+  /profiles:
     get:
-      summary: 'Sample endpoint: Returns details about a particular user'
-      operationId: listUser
+      summary: 'Returns all profiles based on the authorizations of the authenticated user'
+      operationId: listProfiles
       tags:
-        - user
+        - profiles
       parameters:
-        - name: id
+        - name: filter.id
           in: query
-          description: ID of the user
-          required: true
+          description: Filter by any profile ID
+          required: false
           schema:
-            type: integer
-            format: int32
+            type: string
       responses:
         '200':
-          description: 'Sample response: Details about a user by ID'
-          headers:
-            x-next:
-              description: A link to the next page of responses
-              schema:
-                type: string
+          description: 'An array of profiles'
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: '#/components/schemas/Profiles'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'     
         default:
-          description: Unexpected error
+          $ref: '#/components/responses/UnexpectedError'
+  /profiles/{id}:
+    get:
+      summary: 'Get a Profile'
+      operationId: fetchProfile
+      tags:
+        - profiles
+      parameters:
+        - $ref: '#/components/parameters/ID'
+      responses:
+        '200':
+          description: 'A profile'
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
-components:
+                $ref: '#/components/schemas/Profile'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'     
+        default:
+          $ref: '#/components/responses/UnexpectedError'
+    delete:
+      summary: 'Delete a Profile'
+      operationId: deleteProfile
+      tags:
+        - profiles
+      parameters:
+        - $ref: '#/components/parameters/ID'
+      responses:
+        '204':
+          description: 'No Content - Delete was successful'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'     
+        default:
+          $ref: '#/components/responses/UnexpectedError'
+          
+    put:
+      summary: 'Update a profile'
+      operationId: updateProfile
+      tags:
+        - profiles
+      parameters:
+        - $ref: '#/components/parameters/ID'
+      requestBody:
+          description: Must be a full profile with your updated fields
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+              example:
+                id: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+                name: "ioneyed 2.0"
+                given_name: "Robert"
+                family_name: "Buchanan"
+      responses:
+        '204':
+          description: 'No Content - Update was successful'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'     
+        default:
+          $ref: '#/components/responses/UnexpectedError'
+components:                                         # Components are reusable blocks of schemas
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://msmckong.b2clogin.com/msmckong.onmicrosoft.com/oauth2/v2.0/authorize?p=b2c_1_default
+          tokenUrl: https://msmckong.b2clogin.com/msmckong.onmicrosoft.com/oauth2/v2.0/token?p=b2c_1_default
+          scopes:
+            openid: Generates an ID_TOKEN
+            offline_access: Generates a refresh token
+            b8777e37-7cb2-4977-bafe-2dcb1c9723d4: Grants access token
+  parameters:
+    ID:
+      name: id
+      in: path
+      description: to be updated
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    UnexpectedError:
+      description: An unexpected error has occured
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: 'PROFILE-107-500'
+            message: 'things are broken, we are applying all the duct tape'
+    Unauthorized:
+      description: The user is unauthorized for this action
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: 'PROFILE-108-401'
+            message: 'you do not have appropriate credentials'
+    Forbidden:
+      description: The user in forbidden from completing that action
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: 'PROFILE-109-403'
+            message: 'thou shall not pass for you are forbidden'
+    NotFound:
+      description: The resource was not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: 'PROFILE-110-404'
+            message: 'resource was not found'
   schemas:
-    User:
+    Profiles:
+      type: array
+      items:
+        oneOf:
+          - $ref: '#/components/schemas/Profile'
+    Profile:
       type: object
       required:
         - id
         - name
+        - given_name
+        - family_name
       properties:
         id:
-          type: integer
-          format: int64
+          type: string
+          format: uuid
         name:
           type: string
-        tag:
+          example: "ioneyed"
+        given_name:
           type: string
+          example: "Robert"
+        family_name:
+          type: string
+          example: "Buchanan"
     Error:
       type: object
       required:
@@ -59,7 +203,9 @@ components:
         - message
       properties:
         code:
-          type: integer
-          format: int32
+          type: string
+          pattern: 'PROFILE-\d{3}-\d{3}'
+          example: "PROFILE-100-507"
         message:
           type: string
+          example: "we have run out of storage; this is embarrassing, and someone have been paged"
