@@ -7,7 +7,7 @@
   "item": [
     {
       "name": "echo req",
-      "_postman_id": "a64a8e69-3787-4c12-9041-75b03c7c8b00",
+      "id": "a64a8e69-3787-4c12-9041-75b03c7c8b00",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
