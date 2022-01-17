@@ -1,9 +1,9 @@
 openapi: 3.0.0
 info:
   version: '1.0'
-  title: admin api updated
+  title: 'manual api'
 servers:
-  - url: 'http://localhost:3000'
+  - url: 'localhost:3000'
 paths:
   /user:
     get:
@@ -63,3 +63,9 @@ components:
           format: int32
         message:
           type: string
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+security:
+  - BasicAuth: []
