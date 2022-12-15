@@ -1,0 +1,4 @@
+on:
+  repository_dispatch:
+    types: on-demand-test
+  push:
