@@ -2,3 +2,13 @@ on:
   repository_dispatch:
     types: on-demand-test
   push:
+
+jobs:
+  push-job:
+    name: Somebody pushed me
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Yell
+        run: |
+          echo "I was pushed"
