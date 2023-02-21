@@ -20,6 +20,6 @@ jobs:
 
       - name: Check stuff
         env:
-          APP_VERSION: ${{ steps.consumer_version.outputs.app_version }}
+          APP_VERSION: ${{ github.head_ref }}.${{ github.sha }}
         if: ${{ success() }}
-        run: echo ${{ steps.consumer_version.outputs.app_version }}
+        run: echo "$APP_VERSION"
