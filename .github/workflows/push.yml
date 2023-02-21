@@ -26,4 +26,4 @@ jobs:
         env:
           APP_VERSION: ${{ github.sha }}
         if: ${{ success() }}
-        run: npm run test -- --randomVar=${APP_VERSION}
+        run: npm run test -- --randomVar=${{ github.sha }}
