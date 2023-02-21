@@ -13,3 +13,13 @@ jobs:
       - name: Yell
         run: |
           echo "I was pushed"
+
+      - name: Get current branch Git commit
+        id: consumer_version
+        run: echo "app_version=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Check stuff
+        env:
+          APP_VERSION: ${{ steps.consumer_version.outputs.app_version }}
+        if: ${{ success() }}
+        run: echo ${APP_VERSION}
