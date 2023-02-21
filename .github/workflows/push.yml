@@ -20,4 +20,4 @@ jobs:
 
       - name: Check stuff
         if: ${{ success() }}
-        run: SAMPLE_VAR='test' npm run test -- --randomVar=${APP_VERSION}
+        run: export SAMPLE_VAR='test' && npm run test -- --randomVar=${APP_VERSION}
