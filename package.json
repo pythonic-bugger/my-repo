@@ -1,0 +1,19 @@
+{
+  "name": "my-repo",
+  "version": "1.0.0",
+  "description": "You can use the [editor on GitHub](https://github.com/pythonic-bugger/my-repo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'hello' && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pythonic-bugger/my-repo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pythonic-bugger/my-repo/issues"
+  },
+  "homepage": "https://github.com/pythonic-bugger/my-repo#readme"
+}
