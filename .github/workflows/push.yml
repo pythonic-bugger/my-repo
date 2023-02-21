@@ -10,6 +10,10 @@ jobs:
     name: Somebody pushed me
     runs-on: ubuntu-latest
     steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
       - name: Yell
         run: |
           echo "I was pushed"
