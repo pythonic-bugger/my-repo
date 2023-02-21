@@ -19,7 +19,5 @@ jobs:
         run: echo "app_version=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
 
       - name: Check stuff
-        env:
-          APP_VERSION: ${{ github.sha }}
         if: ${{ success() }}
-        run: npm run test -- --randomVar=${APP_VERSION}
+        run: SAMPLE_VAR='test' npm run test -- --randomVar=${APP_VERSION}
