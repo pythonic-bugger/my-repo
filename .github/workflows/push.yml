@@ -22,4 +22,4 @@ jobs:
         env:
           APP_VERSION: ${{ steps.consumer_version.outputs.app_version }}
         if: ${{ success() }}
-        run: echo ${{APP_VERSION}}
+        run: echo ${{ steps.consumer_version.outputs.app_version }}
