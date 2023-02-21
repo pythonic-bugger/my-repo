@@ -22,4 +22,6 @@ jobs:
         env:
           APP_VERSION: ${{ github.head_ref }}.${{ github.sha }}
         if: ${{ success() }}
-        run: echo "$APP_VERSION"
+        run: 
+          echo "$APP_VERSION"
+          echo "${GITHUB_SHA::7}"
