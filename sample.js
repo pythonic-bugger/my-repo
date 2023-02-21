@@ -1,0 +1,1 @@
+console.log(`value is ${process.env.SAMPLE_VAR}`);
