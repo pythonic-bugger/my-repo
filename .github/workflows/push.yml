@@ -10,10 +10,6 @@ jobs:
     name: Somebody pushed me
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repo
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
       - name: Yell
         run: |
           echo "I was pushed"
@@ -26,4 +22,4 @@ jobs:
         env:
           APP_VERSION: ${{ github.sha }}
         if: ${{ success() }}
-        run: npm run test -- --randomVar=${{ github.sha }}
+        run: npm run test -- --randomVar=${APP_VERSION}
