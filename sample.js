@@ -1,1 +1,1 @@
-console.log(`value is ${process.env.SAMPLE_VAR}`);
+console.log(`value is ${process.env.SECRET_FROM_PACKAGE}`);
