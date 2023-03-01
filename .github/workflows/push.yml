@@ -15,4 +15,4 @@ jobs:
         with:
           persist-credentials: false
       - name: Yell
-        run: export SAMPLE_VAR='mayank' && npm run test
+        run: echo "my branch name is ${{ github.branch }}"
