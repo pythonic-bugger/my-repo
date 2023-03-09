@@ -11,13 +11,13 @@ import * as path from 'path';
 /**
  * Internal dependencies
  */
-import { getBlogById } from '../contract-client';
+import { getBlogById } from './utils/contract-client';
 
 // Config Pact with provider, logging and pact storage details
 const provider = new PactV3( {
 	dir: path.resolve( process.cwd(), '__tests__/contracts/pacts' ),
-	consumer: 'MyConsumer',
-	provider: 'MyProvider',
+	consumer: 'MyTestConsumer',
+	provider: 'MyTestProvider',
 	port: 4000,
 	logLevel: 'INFO',
 } );

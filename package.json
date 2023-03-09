@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "SECRET_FROM_PACKAGE=${process.env.M_SECRET} node sample.js",
-    "update-parker": "pact-broker create-or-update-pacticipant --name=SDS -b, --broker-base-url=https://wpvip.pactflow.io --main-branch=trunk --broker-token=_HXv7b-N5fUa-Tp1ll2A0w"
+    "update-parker": "pact-broker create-or-update-pacticipant --name=SDS -b, --broker-base-url=https://wpvip.pactflow.io --main-branch=add/contract-test-parker --broker-token=_HXv7b-N5fUa-Tp1ll2A0w",
+    "test:contract": "jest -c jest-contract.config.json",
+    "test:contract:publish": "pact-broker publish __tests__/contracts/pacts --auto-detect-version-properties --broker-base-url=https://wpvip.pactflow.io",
+    "test:contract:record:deployment": "pact-broker record-deployment --broker-base-url=https://wpvip.pactflow.io"
   },
   "repository": {
     "type": "git",
@@ -24,20 +27,9 @@
     "node-fetch": "^3.3.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@types/jest": "^29.4.0",
+    "babel-jest": "^29.5.0",
     "nock": "^13.3.0"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "ts",
-      "json"
-    ],
-    "setupFiles": [
-      "./setupTests.js"
-    ],
-    "setupFilesAfterEnv": [
-      "jest-extended/all"
-    ],
-    "testEnvironment": "./testEnv.js"
   }
 }
