@@ -42,6 +42,6 @@ jobs:
           APP_BRANCH: ${{ github.head_ref || github.ref_name }}
           APP_DEPLOYMENT_ENVIRONMENT: 'production'
           PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
-        if:  github.event_name == 'push' && ${APP_BRANCH} == 'master'
+        if:  github.event_name == 'push'
         run: |
           npm run test:contract:record:deployment --  --pacticipant ${APP_NAME} --version ${APP_VERSION} --environment ${APP_DEPLOYMENT_ENVIRONMENT} --broker-token=${PACT_BROKER_TOKEN}
