@@ -1,0 +1,56 @@
+{
+  "consumer": {
+    "name": "MyTestConsumer"
+  },
+  "interactions": [
+    {
+      "description": "a request to get blog by blogId",
+      "providerStates": [
+        {
+          "name": "valid blog Id"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/v2/sites/71/blogs/3189"
+      },
+      "response": {
+        "body": {
+          "foo": "bar",
+          "some": "thing"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          }
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "10.4.1"
+    },
+    "pactRust": {
+      "ffi": "0.4.0",
+      "models": "1.0.4"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "MyTestProvider"
+  }
+}

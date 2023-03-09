@@ -1,0 +1,12 @@
+{
+    "moduleFileExtensions": ["js", "json", "ts"],
+    "rootDir": ".",
+    "testEnvironment": "node",
+    "testRegex": ".contract-spec.js$",
+    "transform": {
+      "^.+\\.(js)$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+    ]
+  }
+  
