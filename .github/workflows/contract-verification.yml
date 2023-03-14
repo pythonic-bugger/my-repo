@@ -1,0 +1,11 @@
+name: Contract Validation
+
+on: [repository_dispatch]
+
+jobs:
+
+  simple-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sample step
+        run: echo 'Hello'
