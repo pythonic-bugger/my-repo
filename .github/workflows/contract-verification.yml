@@ -24,8 +24,9 @@ jobs:
 
       - name: Run Provider Contract Tests
         env:
-          PROVIDER_VERSION: ${{ github.sha }}
+          PROVIDER_VERSION: ${{ github.sha || github.ref }}
           PACT_URL: ${{ github.client_payload.pact_url }}
           PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
+          PROVIDER_BRANCH: ${{ github.head_ref || github.ref_name }}
         run: |
           npm run test:contract-provider -- --broker-token=${PACT_BROKER_TOKEN}
