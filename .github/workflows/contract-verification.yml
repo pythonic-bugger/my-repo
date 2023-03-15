@@ -24,6 +24,7 @@ jobs:
 
       - name: Run Provider Contract Tests
         env:
+          PROVIDER_VERSION: ${{ github.sha }}
           PACT_URL: ${{ github.client_payload.pact_url }}
           PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
         run: |
