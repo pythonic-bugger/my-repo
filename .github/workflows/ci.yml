@@ -26,7 +26,7 @@ jobs:
 
       - name: Run Contract Tests
         if: ${{ success() }}
-        run: npm run test:contract
+        run: npm run test:contract-consumer
 
       - name: Publish Contract Tests
         env:
