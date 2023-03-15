@@ -35,7 +35,7 @@ describe( 'MyProvider', () => {
 			// Using testUtils for ease until the proper response is finalised
 			const providerResponse = {
                 foo: "barium",
-                some: "thingy"
+                some: "thingypoo"
             }
 
 			provider
