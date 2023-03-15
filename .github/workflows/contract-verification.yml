@@ -6,6 +6,18 @@ jobs:
   contract-verification:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - name: Set up Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version-file: '.nvmrc'
+
+      - name: Install dependencies
+        run: npm install
       - name: Start app
         run: |
           npm start & npx wait-on http://localhost:3000
