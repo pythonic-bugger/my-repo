@@ -6,9 +6,11 @@
   "scripts": {
     "test": "SECRET_FROM_PACKAGE=${process.env.M_SECRET} node sample.js",
     "update-parker": "pact-broker create-or-update-pacticipant --name=SDS -b, --broker-base-url=https://wpvip.pactflow.io --main-branch=add/contract-test-parker --broker-token=_HXv7b-N5fUa-Tp1ll2A0w",
-    "test:contract": "jest -c jest-contract.config.json",
+    "test:contract-consumer": "jest -c jest-contract.config.json -- __tests__/sample.contract-spec.js",
     "test:contract:publish": "pact-broker publish __tests__/contracts/pacts --auto-detect-version-properties --broker-base-url=https://wpvip.pactflow.io",
-    "test:contract:record:deployment": "pact-broker record-deployment --broker-base-url=https://wpvip.pactflow.io"
+    "test:contract:record:deployment": "pact-broker record-deployment --broker-base-url=https://wpvip.pactflow.io",
+    "test:contract-provider": "jest -c jest-contract.config.json -- __tests__/provider.contract-spec.js",
+    "test:contract:can-i-deploy": "pact-broker can-i-deploy --pacticipant=MyTestConsumer --broker-base-url=https://wpvip.pactflow.io",
   },
   "repository": {
     "type": "git",
