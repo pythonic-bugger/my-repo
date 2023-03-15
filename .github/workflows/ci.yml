@@ -45,3 +45,12 @@ jobs:
         if:  (github.event_name == 'push' && (github.head_ref || github.ref_name) == 'master')
         run: |
           npm run test:contract:record:deployment --  --pacticipant ${APP_NAME} --version ${APP_VERSION} --environment ${APP_DEPLOYMENT_ENVIRONMENT} --broker-token=${PACT_BROKER_TOKEN}
+
+      - name: Start app
+        run: npm run start
+
+      - name: Run Provider Contract Tests
+        env:
+          PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
+        run: |
+          npm run test:contract-provider -- --broker-token=${PACT_BROKER_TOKEN}

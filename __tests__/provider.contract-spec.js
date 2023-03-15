@@ -19,8 +19,7 @@ describe( 'pact Verification', () => {
 		 * In such event, the test should use the following VerifierOptions to validate the contract
 		 */
 		const pactChangeOpts = {
-			// pactUrls: [process.env.PACT_URL]
-			pactUrls: ['contracts/pacts/MyTestConsumer-MyTestProvider.json']
+			pactUrls: [process.env.PACT_URL]
 		}
 
 		// Core Pact Options
@@ -36,7 +35,6 @@ describe( 'pact Verification', () => {
 		// Verifier Options to fetch contract dynamically
 		const dynamicContractOpts = {
 			// Fetching the pact from broker
-			pactUrls: ['__tests__/contracts/pacts/MyTestConsumer-MyTestProvider.json'],
 			pactBrokerUrl: 'https://wpvip.pactflow.io',
 			pactBrokerToken: process.env.PACT_BROKER_TOKEN,
 
