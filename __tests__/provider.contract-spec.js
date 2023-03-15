@@ -48,7 +48,7 @@ describe( 'pact Verification', () => {
 				}
 			],
 			// SDS branch property that will flow from the CI actions
-			providerBranch: process.env.PROVIDER_BRANCH ?? 'trunk',
+			providerBranch: process.env.PROVIDER_BRANCH ?? 'master',
 		};
 
 		opts = {
