@@ -38,8 +38,6 @@ jobs:
   provider-verification:
     name: Validate provider contract Tests
     runs-on: ubuntu-latest
-    env:
-      PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
