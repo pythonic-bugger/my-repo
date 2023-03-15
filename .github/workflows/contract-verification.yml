@@ -3,8 +3,16 @@ name: Contract Validation
 on: [repository_dispatch]
 
 jobs:
-  simple-job:
+  contract-verification:
     runs-on: ubuntu-latest
     steps:
-      - name: Sample step
-        run: echo 'Hello'
+      - name: Start app
+        run: |
+          npm start & npx wait-on http://localhost:3000
+
+      - name: Run Provider Contract Tests
+        env:
+          PACT_URL: ${{ github.client_payload.pact_url }}
+          PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
+        run: |
+          npm run test:contract-provider -- --broker-token=${PACT_BROKER_TOKEN}
