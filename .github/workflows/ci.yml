@@ -69,7 +69,7 @@ jobs:
           APP_VERSION: ${{ github.sha }}
           DEPLOYMENT_ENVIRONMENT: 'production'
           PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
-        run: npm run test:contract:record-deployment --  --pacticipant ${APP_NAME} --version ${APP_VERSION} --environment ${DEPLOYMENT_ENVIRONMENT} --broker-token=${PACT_BROKER_TOKEN}
+        run: npm run test:contract:record:deployment --  --pacticipant ${APP_NAME} --version ${APP_VERSION} --environment ${DEPLOYMENT_ENVIRONMENT} --broker-token=${PACT_BROKER_TOKEN}
 
   # deploy-check:
   #   needs: [consumer-verification]
