@@ -55,7 +55,7 @@ jobs:
 
       - name: Can I deploy?
         run: |
-          npm run test:contract:can-i-deploy -- --pacticipant='MyTestConsumer' --version=${{ github.sha }} --broker-token=${PACT_BROKER_TOKEN} --to-environment=production --retry-while-unknown=15 --retry-interval=60
+          npm run test:contract:can-i-deploy -- --pacticipant 'MyTestConsumer' --version ${{ github.sha }} --broker-token=${PACT_BROKER_TOKEN} --to-environment 'production' --retry-while-unknown=15 --retry-interval=60
       
       - name: Record Deployment in Pact from main branches
         env:
