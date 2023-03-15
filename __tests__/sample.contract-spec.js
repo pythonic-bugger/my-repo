@@ -34,8 +34,8 @@ describe( 'MyProvider', () => {
 		it( 'get /v2/sites/:siteId/blogs/:blogId', async () => {
 			// Using testUtils for ease until the proper response is finalised
 			const providerResponse = {
-                foo: "barium",
-                some: "thingypoo"
+                foo: "bar",
+                some: "thing"
             }
 
 			provider

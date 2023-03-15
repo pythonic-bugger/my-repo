@@ -35,45 +35,8 @@ jobs:
         if: ${{ success() }}
         run: npm run test:contract:publish -- --consumer-app-version=${APP_VERSION} --broker-token=${PACT_BROKER_TOKEN} --branch=${{ github.head_ref || github.ref_name }}
   
-  provider-verification:
-    name: Validate provider contract Tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the repo
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-      - name: Set up Node.js environment
-        uses: actions/setup-node@v3
-        with:
-          cache: npm
-          node-version-file: '.nvmrc'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Start app
-        run: |
-          npm start & npx wait-on http://localhost:3000
-
-      - name: Run Provider Contract Tests
-        env:
-          PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
-        run: |
-          npm run test:contract-provider -- --broker-token=${PACT_BROKER_TOKEN}
-      
-      - name: Record Deployment
-        if: (github.ref_name == 'master')
-        env:
-          APP_NAME: 'MyTestProvider'
-          APP_VERSION: ${{ github.sha }}
-          DEPLOYMENT_ENVIRONMENT: 'production'
-          PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
-        run: npm run test:contract:record:deployment --  --pacticipant ${APP_NAME} --version ${APP_VERSION} --environment ${DEPLOYMENT_ENVIRONMENT} --broker-token=${PACT_BROKER_TOKEN}
-
-  # deploy-check:
-  #   needs: [consumer-verification]
-  #   name: deploy Check
+  # provider-verification:
+  #   name: Validate provider contract Tests
   #   runs-on: ubuntu-latest
   #   steps:
   #     - name: Check out the repo
@@ -89,19 +52,56 @@ jobs:
   #     - name: Install dependencies
   #       run: npm install
 
-  #     # - name: Can I deploy?
-  #     #   env:
-  #     #     PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
-  #     #   run: |
-  #     #     npm run test:contract:can-i-deploy -- --version ${{ github.sha }} --broker-token=${PACT_BROKER_TOKEN} --to-environment 'production' --retry-while-unknown=15 --retry-interval=60
+  #     - name: Start app
+  #       run: |
+  #         npm start & npx wait-on http://localhost:3000
+
+  #     - name: Run Provider Contract Tests
+  #       env:
+  #         PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
+  #       run: |
+  #         npm run test:contract-provider -- --broker-token=${PACT_BROKER_TOKEN}
       
-  #     # - name: Record Deployment in Pact from main branches
-  #     #   env:
-  #     #     APP_NAME: 'MyTestConsumer'
-  #     #     APP_VERSION: ${{ github.sha }}
-  #     #     APP_BRANCH: ${{ github.head_ref || github.ref_name }}
-  #     #     APP_DEPLOYMENT_ENVIRONMENT: 'production'
-  #     #     PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
-  #     #   if:  (github.event_name == 'push' && (github.head_ref || github.ref_name) == 'master')
-  #     #   run: |
-  #     #     npm run test:contract:record:deployment --  --pacticipant ${APP_NAME} --version ${APP_VERSION} --environment ${APP_DEPLOYMENT_ENVIRONMENT} --broker-token=${PACT_BROKER_TOKEN}
+  #     - name: Record Deployment
+  #       if: (github.ref_name == 'master')
+  #       env:
+  #         APP_NAME: 'MyTestProvider'
+  #         APP_VERSION: ${{ github.sha }}
+  #         DEPLOYMENT_ENVIRONMENT: 'production'
+  #         PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
+  #       run: npm run test:contract:record:deployment --  --pacticipant ${APP_NAME} --version ${APP_VERSION} --environment ${DEPLOYMENT_ENVIRONMENT} --broker-token=${PACT_BROKER_TOKEN}
+
+  deploy-check:
+    needs: [consumer-verification]
+    name: deploy Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - name: Set up Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version-file: '.nvmrc'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Can I deploy?
+        env:
+          PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
+        run: |
+          npm run test:contract:can-i-deploy -- --version ${{ github.sha }} --broker-token=${PACT_BROKER_TOKEN} --to-environment 'production' --retry-while-unknown=15 --retry-interval=60
+      
+      - name: Record Deployment in Pact from main branches
+        env:
+          APP_NAME: 'MyTestConsumer'
+          APP_VERSION: ${{ github.sha }}
+          APP_BRANCH: ${{ github.head_ref || github.ref_name }}
+          APP_DEPLOYMENT_ENVIRONMENT: 'production'
+          PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
+        if:  (github.event_name == 'push' && (github.head_ref || github.ref_name) == 'master')
+        run: |
+          npm run test:contract:record:deployment --  --pacticipant ${APP_NAME} --version ${APP_VERSION} --environment ${APP_DEPLOYMENT_ENVIRONMENT} --broker-token=${PACT_BROKER_TOKEN}
