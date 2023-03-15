@@ -48,7 +48,7 @@ describe( 'pact Verification', () => {
 				}
 			],
 			// SDS branch property that will flow from the CI actions
-			providerBranch: process.env.PROVIDER_BRANCH ?? 'master',
+			providerVersionBranch: process.env.PROVIDER_BRANCH ?? 'master',
 		};
 
 		opts = {
@@ -58,6 +58,7 @@ describe( 'pact Verification', () => {
 	} );
 
 	it( 'should validate Parker expectations', async () => {
+		console.log(`running verification for sha ${process.env.PROVIDER_VERSION}`)
 		const verifier = new Verifier( opts );
 		await verifier.verifyProvider();
 	} );

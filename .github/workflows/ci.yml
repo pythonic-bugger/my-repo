@@ -58,7 +58,6 @@ jobs:
 
       - name: Run Provider Contract Tests
         env:
-          PROVIDER_VERSION: ${{ github.sha }}
           PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
         run: |
           npm run test:contract-provider -- --broker-token=${PACT_BROKER_TOKEN}
@@ -90,19 +89,19 @@ jobs:
   #     - name: Install dependencies
   #       run: npm install
 
-  #     # - name: Can I deploy?
-  #     #   env:
-  #     #     PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
-  #     #   run: |
-  #     #     npm run test:contract:can-i-deploy -- --version ${{ github.sha }} --broker-token=${PACT_BROKER_TOKEN} --to-environment 'production' --retry-while-unknown=15 --retry-interval=60
+  #     - name: Can I deploy?
+  #       env:
+  #         PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
+  #       run: |
+  #         npm run test:contract:can-i-deploy -- --version ${{ github.sha }} --broker-token=${PACT_BROKER_TOKEN} --to-environment 'production' --retry-while-unknown=15 --retry-interval=60
       
-  #     # - name: Record Deployment in Pact from main branches
-  #     #   env:
-  #     #     APP_NAME: 'MyTestConsumer'
-  #     #     APP_VERSION: ${{ github.sha }}
-  #     #     APP_BRANCH: ${{ github.head_ref || github.ref_name }}
-  #     #     APP_DEPLOYMENT_ENVIRONMENT: 'production'
-  #     #     PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
-  #     #   if:  (github.event_name == 'push' && (github.head_ref || github.ref_name) == 'master')
-  #     #   run: |
-  #     #     npm run test:contract:record:deployment --  --pacticipant ${APP_NAME} --version ${APP_VERSION} --environment ${APP_DEPLOYMENT_ENVIRONMENT} --broker-token=${PACT_BROKER_TOKEN}
+  #     - name: Record Deployment in Pact from main branches
+  #       env:
+  #         APP_NAME: 'MyTestConsumer'
+  #         APP_VERSION: ${{ github.sha }}
+  #         APP_BRANCH: ${{ github.head_ref || github.ref_name }}
+  #         APP_DEPLOYMENT_ENVIRONMENT: 'production'
+  #         PACT_BROKER_TOKEN: ${{ secrets.PACT_API_TOKEN }}
+  #       if:  (github.event_name == 'push' && (github.head_ref || github.ref_name) == 'master')
+  #       run: |
+  #         npm run test:contract:record:deployment --  --pacticipant ${APP_NAME} --version ${APP_VERSION} --environment ${APP_DEPLOYMENT_ENVIRONMENT} --broker-token=${PACT_BROKER_TOKEN}
