@@ -36,9 +36,23 @@ jobs:
         run: npm run test:contract:publish -- --consumer-app-version=${APP_VERSION} --broker-token=${PACT_BROKER_TOKEN} --branch=${{ github.head_ref || github.ref_name }}
 
   deploy-check:
+    needs: [push-job]
     name: deploy Check
     runs-on: ubuntu-latest
     steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - name: Set up Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version-file: '.nvmrc'
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Can I deploy?
         run: |
           npm run test:contract:can-i-deploy -- --pacticipant='MyTestConsumer' --version=${{ github.sha }} --broker-token=${PACT_BROKER_TOKEN} --to-environment=production --retry-while-unknown=15 --retry-interval=60
