@@ -47,7 +47,8 @@ jobs:
           npm run test:contract:record:deployment --  --pacticipant ${APP_NAME} --version ${APP_VERSION} --environment ${APP_DEPLOYMENT_ENVIRONMENT} --broker-token=${PACT_BROKER_TOKEN}
 
       - name: Start app
-        run: npm run start
+        run: |
+          npm start & npx wait-on http://localhost:3000
 
       - name: Run Provider Contract Tests
         env:
